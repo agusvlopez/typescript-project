@@ -1,5 +1,5 @@
 'use client';
-import { RandomFox } from "../src/components/RandomFox";
+import { LazyImage } from "../src/components/LazyImage";
 import { NextPage } from "next";
 import { MouseEventHandler, useState } from 'react';
 
@@ -32,7 +32,15 @@ const Home = () => {
         </div>
         {images.map(({ id, url }) => (
           <div className="p-4" key={id}>
-            <RandomFox alt="Zorro" image={url} />
+            <LazyImage
+              alt="Zorro"
+              src={url}
+              onClick={() => console.log("hey")}
+              title="Random Fox"
+              width={320}
+              height="auto"
+              className="rounded bg-gray-300"
+            />
           </div>
         ))}
       </div>

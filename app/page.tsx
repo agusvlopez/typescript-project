@@ -2,7 +2,7 @@
 import { LazyImage } from "../src/components/LazyImage";
 import { NextPage } from "next";
 import { MouseEventHandler, useState } from 'react';
-import { random } from 'lodash';
+import { random } from "lodash";
 
 const myRandom = () => random(1, 123);
 

@@ -2,8 +2,9 @@
 import { LazyImage } from "../src/components/LazyImage";
 import { NextPage } from "next";
 import { MouseEventHandler, useState } from 'react';
+import { random } from 'lodash';
 
-const random = () => Math.floor(Math.random() * 123) + 1;
+const myRandom = () => random(1, 123);
 
 const Home = () => {
   const [images, setImages] = useState<Array<IFoxImageItem>>([]);
@@ -12,7 +13,7 @@ const Home = () => {
 
     const newImageItem: IFoxImageItem = {
       id: '1',
-      url: `https://randomfox.ca/images/${random()}.jpg`
+      url: `https://randomfox.ca/images/${myRandom()}.jpg`
     }
 
     setImages([
